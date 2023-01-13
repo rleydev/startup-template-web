@@ -1,0 +1,88 @@
+.headline-section {
+    justify-content: center;
+    background-image: url(../assets/first_background.png);
+    background-position: right;
+    background-size: cover;
+    height: 800px;
+
+    perspective: 1000px;
+    perspective-origin: right center;
+}
+
+.backgound-lights-opacity-img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: right;
+    animation: lightUp 3s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes lightUp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.backgound-stars {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+    animation: scaleStars 3s  infinite alternate ease-in-out;
+    z-index: 99;
+}
+
+@keyframes scaleStars {
+    0% { 
+        transform: translateZ(0px);
+    }
+
+    100% {
+        transform: translateZ(50px);
+    }
+}
+
+.headline-section-article {
+    margin-top: 252px;
+    display: flex;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headline-section-article img {
+    width: 63px;
+    height: 63px;
+
+    /* Animation for image */
+
+    transform: scaleX(1);
+    transition: all 0.5s ease-in;
+    
+}
+
+/* Animation for image */
+.headline-section-article img:hover {
+    cursor: pointer;
+    transform: scaleX(-1) scale(1.5);
+
+}
+
+.headline-section-article h1 {
+    margin-top: 13px;
+}
+
+.headline-section-article h2 {
+    /*
+        MAKET SHOWS THE WRONG SPACING - 42px;
+        ACCORDING TO PERFECT PIXEL EXTENSION IT SHOULD BE 33px 
+    */
+    margin-top: 33px;
+}

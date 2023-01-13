@@ -8,6 +8,7 @@
 - Mobile version adaptive design until (768px)
 - HTML, CSS
 - Gitflow
+- Landing is developed according to Figma design
 
 #### The history of the whole development performed on Gitlab by division for several steps:
 1) https://gitlab.com/rleydev/html-essentials-hometask

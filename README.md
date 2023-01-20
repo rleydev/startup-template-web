@@ -25,4 +25,4 @@
 - SASS in scss is writen in **saas_project** branch and merged into **develop** branch
 - The project is reviewed by EPAM Systems Frontend Software Engineers
 
-### Deploy: 
+### Deploy: https://rleydev.github.io/startup-template-web

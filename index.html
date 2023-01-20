@@ -14,19 +14,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/headline_section.css">
-    <link rel="stylesheet" href="styles/description_section.css">
-    <link rel="stylesheet" href="styles/learn_more_section.css">
-    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="scss_styles/style.css">
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <a class="header-logo-text" href="index.html">Project</a>
-            <img src="assets/Header__menu.png" alt ="burger-menu"class="burger-menu-button">
-            <nav class="header-nav-container">
+        <div class="header__container">
+            <a class="header__container__logo-text" href="index.html">Project</a>
+            <img src="assets/Header__menu.png" alt ="burger-menu" class="header__container__burger-menu-button">
+            <nav class="header__container__nav-container">
                 <a href="index.html">Projects</a>
                 <a href="index.html">About us</a>
                 <a href="index.html">Stories</a>
@@ -37,9 +32,9 @@
 
     <main>
         <section class="headline-section">
-            <img class="backgound-lights-opacity-img" src="./assets/lights_background.png" alt="lights">
-            <img class="backgound-stars" src="./assets/stars_background.png" alt="stars">
-            <article class="headline-section-article">
+            <img class="headline-section__background-lights--opacity" src="./assets/lights_background.png" alt="lights">
+            <img class="headline-section__background-stars--scale" src="./assets/stars_background.png" alt="stars">
+            <article class="headline-section__container">
                 <img src="assets/big-logo.png" alt="logo1">
                 <h1>
                     Your Headline <br> Here
@@ -50,14 +45,14 @@
             </article>
         </section>
         <section class="description-section">
-            <article class="description-section-article">
+            <article class="description-section__container">
                 <h1>
                     This is the Section Headline, Continues to <br>Two Lines
                 </h1>
                 <h2>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.
                 </h2>
-                <div class="description-text-container">
+                <div class="description-section__container__text-container">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.
@@ -67,7 +62,7 @@
                     </p>
                 </div>
                 <!-- added div to adjust design for mobile -->
-                <div class="button-container">
+                <div class="description-section__container__button-container">
                     <button type="button">
                         Read More
                     </button>
@@ -75,12 +70,12 @@
             </article>
         </section>
         <section class="learn-more-section">
-            <div class="learn-more-section-color-layer">
-                <article class="learn-more-section-article">
+            <div class="learn-more-section__color-layer">
+                <article class="learn-more-section__color-layer__content-container">
                     <h1>
                         Learn more <br>about our culture...
                     </h1>
-                    <button><img class="play-normal-icon" src="assets/play.svg"><img class="play-hover-icon" src="assets/play_hover.svg"></button>
+                    <button><img class="learn-more-section__color-layer__content-container__play-img--normal" src="assets/play.svg"><img class="learn-more-section__color-layer__content-container__play-img--hover" src="assets/play_hover.svg"></button>
                     <h2>
                         Duis aute irure dolor in reprehenderit <br>in voluptate velit esse cillum dolore eu <br>fugiat nulla pariatur.
                     </h2>
@@ -90,19 +85,19 @@
     </main>
     <footer>
         <div class="footer-container">
-            <div class="left-footer-container">
-                <div class="footer-logo-container">
+            <div class="footer-container__left-footer-container">
+                <div class="footer-container__left-footer-container__footer-logo-container">
                     <img src="assets/footer-logo.png" alt="footer-logo">
                     <h3>Project</h3>
                 </div>
-                <div class="footer-contact-container">
+                <div class="footer-container__left-footer-container__footer-contact-container">
                     <p>
                         123 Street, <br>Anytown, USA 12345
                     </p>
                     <a href="index.html">hello@website.com</a>
                 </div>
             </div>
-            <p class="copyright-text">&copy; 2021 Project. All rights reserved</p>
+            <p class="footer-container__copyright-text">&copy; 2021 Project. All rights reserved</p>
         </div>
     </footer>
 </body>

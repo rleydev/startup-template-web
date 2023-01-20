@@ -1,0 +1,79 @@
+@use "../variables" as var;
+
+/* Animation for the hole play button hover */
+/* Settings for play icon change color */
+.learn-more-section {
+	display: flex;
+	flex-direction: column;
+	height: 637px;
+	background: url(../assets/third_background.jpg);
+	background-position: center;
+	background-size: cover;
+
+    &__color-layer {
+        @include setup-size(auto, 637px);
+        background-color: var.$layer-color;
+
+        &__content-container {
+            margin-top: 84px;
+            display: flex;
+            flex-direction: column;
+
+            @include media-query(var.$media-query_768) {
+                margin-top: 72px;
+            }
+
+            h1 {
+                align-self: center;
+            }
+            button {
+                align-self: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 42px;
+                @include setup-size(150px, 150px);
+                background-color: var.$light-blue-button-color;
+                border-width: 0;
+                border-radius: 50%;
+
+                @include media-query(var.$media-query_768) {
+                    width: 100px;
+                    height: 100px;
+                    margin-top: 91px;
+                }
+            }
+            h2 {
+                margin-top: 70px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 390px;
+                font-weight: inherit;
+
+                @include media-query(var.$media-query_768) {
+                    margin-top: 82px;
+                }
+            }
+
+            &__play-img--normal {
+                margin-left: 15px;
+                @include setup-size(68px, 53px);
+
+                @include media-query(var.$media-query_768) {
+                    @include setup-size(47px, 37px);                   
+                }
+            }
+    
+            &__play-img--hover {
+                display: none;
+                margin-left: 15px;
+                @include setup-size(63px, 48px);
+
+                @include media-query(var.$media-query_768) {
+                    @include setup-size(43px, 32px);
+                }
+            }
+        }
+    }
+}
+

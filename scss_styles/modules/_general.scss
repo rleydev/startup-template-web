@@ -1,0 +1,53 @@
+@use "../variables" as var;
+
+* {
+	box-sizing: border-box;
+	&:before {
+		box-sizing: border-box;
+	}
+	&:after {
+		box-sizing: border-box;
+	}
+}
+body {
+	margin: var.$zero-value;
+}
+main {
+	width: var.$hundreed-percent-width;
+	display: flex;
+	flex-direction: column;
+	gap: var.$zero-value;
+}
+section {
+	margin: var.$zero-value;
+}
+p {
+	margin: var.$zero-value;
+	padding: var.$zero-value;
+	@include setup-font(var.$font-family_sans-pro, 16px, var.$font-weight-400, 22px);
+	color: var.$black-color_p;
+}
+h1 {
+	margin: var.$zero-value;
+	padding: var.$zero-value;
+	@include setup-font(var.$font-family_oswald, 48px, var.$font-weight-700, 64px);
+	text-align: center;
+}
+h2 {
+	margin: var.$zero-value;
+	padding: var.$zero-value;
+	@include setup-font(var.$font-family_sans-pro, 24px, var.$font-weight-400, 32px);
+	text-align: center;
+}
+h3 {
+	margin: var.$zero-value;
+	padding: var.$zero-value;
+	@include setup-font(var.$font-family_sans-pr0, 18px, var.$font-weight-400, 16px);
+	text-transform: uppercase;
+	color: var.$white-color_h1_h3;
+	letter-spacing: 0.25rem;
+}
+button {
+	margin: var.$zero-value;
+	padding: var.$zero-value;
+}

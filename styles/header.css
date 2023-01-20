@@ -7,7 +7,7 @@ header {
     justify-content: center;
 }
 
-.header-container {
+.header__container {
     display: inline-flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -19,26 +19,26 @@ header {
     flex-wrap: wrap;
 }
 
-.header-container a:link {
+.header__container a:link {
     text-decoration: none;
 }
 
-.burger-menu-button {
+.header__container__burger-menu-button {
     display: none;
 }
 
-.header-logo-text {
+.header__container__logo-text {
     width: 91px;
 }
 
-.header-nav-container {
+.header__container__nav-container {
     display: flex;
     flex-direction: row;
     width: 395px;
     justify-content: space-between;
 }
 
-.header-container > a {
+.header__container > a {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
     font-weight: 600px;
@@ -51,7 +51,7 @@ header {
     line-height: 19px;
 }
 
-.header-nav-container > a {
+.header__container__nav-container > a {
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 14px;
@@ -63,7 +63,7 @@ header {
     line-height: 19px;
 }
 
-.header-nav-container a:nth-child(2) {
+.header__container__nav-container a:nth-child(2) {
     border-bottom-width: 2px;
     border-bottom-style: solid;
     padding-bottom: 6px;
@@ -76,16 +76,16 @@ header {
         justify-content: center;
     }
 
-    .header-container {
+    .header__container {
         margin-left: 27px;
         margin-right: 23px;
     }
 
-    .burger-menu-button {
+    .header__container__burger-menu-button {
         display: block;
     }
 
-    .header-nav-container {
+    .header__container__nav-container {
         display: none;
         margin: 0;
     }

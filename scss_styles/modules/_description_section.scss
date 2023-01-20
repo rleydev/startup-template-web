@@ -1,0 +1,116 @@
+@use "../variables" as var;
+
+.description-section {
+	background-color: var.$backgound-white-color;
+	width: auto;
+	min-height: 700px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 87px;
+        margin-bottom: auto;
+        flex-wrap: wrap;
+
+        @include media-query(var.$media-query_768) {
+            align-items: flex-start;
+            justify-content: left;
+            width: 408px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            align-self: center;
+            width: 669px;
+            color: var.$grey-color_1;
+
+            @include media-query(var.$media-query_768) {
+                max-width: 340px;
+                text-align: left;
+                margin-left: 0px;
+                margin-right: auto;
+            }
+            br {
+                display: none;
+
+                @include media-query(var.$media-query_768) {
+                    display: inline;
+                }
+            }
+        }
+        h2 {
+            align-self: center;
+            margin-top: 30px;
+            width: 426px;
+            color: var.$grey-color_2;
+            font-weight: inherit;
+
+            @include media-query(var.$media-query_768) {
+                max-width: 408px;
+			    text-align: left;
+            }
+        }
+        button {
+            margin-top: 21px;
+            margin-bottom: 98px;
+            margin-left: auto;
+            margin-right: auto;
+            @include setup-size(115px, 36px);
+            background-color: var.$light-blue-color;
+            border-width: 0;
+            border-radius: 18px;
+            color: var.$white-color;
+            @include setup-font(var.$font-family_oswald, 14px, 100, 26px);
+            text-align: center;
+            letter-spacing: 0.111rem;
+            text-transform: uppercase;
+
+            @include media-query(var.$media-query_768) {
+                position: static;
+                margin-top: 24px;
+                margin-bottom: 116px;
+                margin-left: 0;
+                align-self: left;
+            }
+        }
+
+        &__text-container {
+            margin-top: 43px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            max-width: 907px;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 83px;
+            height: auto;
+
+            @include media-query(var.$media-query_768) {
+                align-self: left;
+                max-width: 408px;
+                flex-direction: column;
+                gap: 24px;
+                justify-content: left;
+            }
+            p {
+                text-align: left;
+                &:nth-child(1) {
+                    max-width: 408px;
+                }
+                &:nth-child(2) {
+                    max-width: 416px;
+                }
+            }
+        }
+
+        &__button-container {
+            align-self: center;
+
+            @include media-query(var.$media-query_768) {
+                width: 408px;
+		        margin: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,112 @@
+.learn-more-section {
+    display: flex;
+    flex-direction: column;
+    height: 637px;
+    background: url(../assets/third_background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.learn-more-section-color-layer {
+    width: auto;
+    height: 637px;
+    background-color: rgba(140, 79, 42, 0.3);
+}
+
+.learn-more-section-article {
+    margin-top: 84px;
+    display: flex;
+    flex-direction: column;
+}
+
+.learn-more-section-article h1 {
+    align-self: center;
+}
+
+.learn-more-section-article button {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     /*
+        MAKET SHOWS THE WRONG SPACING - 53px;
+        ACCORDING TO PERFECT PIXEL EXTENSION IT SHOULD BE 42px 
+    */
+    margin-top: 42px;
+    width: 150px;
+    height: 150px;
+
+    background-color: rgba(57, 194, 215, 1);
+    border-width: 0;
+    border-radius: 50%;
+
+    /* Animation for play button hover */
+    transition: all 0.5s ease-in-out;
+    transform: scale(1);
+}
+
+/* Animation for the hole play button hover */
+
+.learn-more-section-article button:hover {
+    transform: scale(0.87);
+    background-color: white;
+
+}
+
+.play-normal-icon {
+    margin-left: 15px;
+    height: 53px;
+    width: 68px;
+}
+
+/* Settings for play icon change color */
+
+.play-hover-icon {
+    display: none;
+    margin-left: 15px;
+    width: 63px;
+    height: 48px;
+}
+
+.learn-more-section-article button:hover .play-normal-icon {
+    display: none;
+}
+
+.learn-more-section-article button:hover .play-hover-icon {
+    display: block;
+}
+
+.learn-more-section-article h2 {
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 390px;
+}
+
+@media only screen and (max-width: 768px)  {
+    .learn-more-section-article button {
+        width: 100px;
+        height: 100px;
+
+        margin-top: 91px;
+    }
+
+    .learn-more-section-article {
+        margin-top: 72px;
+    }
+
+    .learn-more-section-article h2 {
+        margin-top: 82px;
+    }
+
+    .play-normal-icon {
+        width: 47px;
+        height: 37px;
+    }
+
+    .play-hover-icon {
+        width: 43px;
+        height: 32px;
+    }
+}

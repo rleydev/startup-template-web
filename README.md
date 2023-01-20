@@ -5,8 +5,9 @@
 ### About:
 
 - Fully responsive landing from 410px
-- Mobile version adaptive design until (768px)
+- Mobile version adaptive design with breakpoint at (768px)
 - HTML, CSS
+- SASS preprocessors - SCSS 
 - Gitflow
 - Landing is developed according to Figma design
 
@@ -17,7 +18,11 @@
 4) https://gitlab.com/rleydev/css-flex-grid-hometask
 5) https://gitlab.com/rleydev/css-transforms-and-transitions
 6) https://gitlab.com/rleydev/css-animations
+7) https://gitlab.com/rleydev/css-preprocessors
 
 ### Notes
 - Original CSS styling implemented in **general_css** branch
-- The project is reviewed by EPAM Systems Mid and Sr lvl Frontend Developers
+- SASS in scss is writen in **saas_project** branch and merged into **develop** branch
+- The project is reviewed by EPAM Systems Frontend Software Engineers
+
+### Deploy: 

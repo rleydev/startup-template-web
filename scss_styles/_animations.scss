@@ -1,0 +1,70 @@
+@use "./variables" as var;
+
+// Background Animations
+@keyframes lightUp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleStars {
+    0% { 
+        transform: translateZ(0px);
+    }
+
+    100% {
+        transform: translateZ(50px);
+    }
+}
+
+.headline-section {
+    perspective: 1000px;
+    perspective-origin: right center;
+}
+
+.headline-section__background-lights--opacity {
+    animation: lightUp 3s infinite alternate-reverse ease-in-out;
+}
+
+.headline-section__background-stars--scale {
+    animation: scaleStars 3s  infinite alternate ease-in-out;
+}
+
+// Hover animations
+.headline-section__container img {
+    transform: scaleX(1);
+    transition: all 0.5s ease-in;
+
+    &:hover {
+        cursor: pointer;
+        transform: scaleX(-1) scale(1.5);
+    } 
+}
+
+.description-section__container button {
+    transition: all 0.3s ease-in-out;
+    transform-origin: left center;
+    &:hover {
+        cursor: pointer;
+        transform: rotate(10deg);
+    }
+}
+
+.learn-more-section__color-layer__content-container button {
+    transition: all 0.5s ease-in-out;
+    transform: scale(1);
+
+    &:hover {
+        transform: scale(0.87);
+        background-color: var.$white-color;
+        .learn-more-section__color-layer__content-container__play-img--normal {
+            display: none;
+        }
+        .learn-more-section__color-layer__content-container__play-img--hover {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.headline-section {
+    justify-content: center;
+    background-image: url(../assets/first_background.png);
+    background-position: right;
+    background-size: cover;
+    height: 800px;
+
+    &__background-lights--opacity {
+        @include setup-animation-background-elements();
+    }
+
+    &__background-stars--scale {
+        @include setup-animation-background-elements();
+    }
+
+    &__container {
+        margin-top: 252px;
+        display: flex;
+        height: auto;
+        width: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        img {
+            position: relative;
+            @include setup-size(63px, 63px);
+            z-index: 110;
+        }
+    
+        h1 {
+            margin-top: 13px;
+        }
+    
+        h2 {
+            /*
+                MAKET SHOWS THE WRONG SPACING - 42px;
+                ACCORDING TO PERFECT PIXEL EXTENSION IT SHOULD BE 33px 
+            */
+            margin-top: 33px;
+            font-weight: inherit;
+        }
+    }
+}

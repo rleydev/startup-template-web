@@ -1,6 +1,6 @@
 # Frontend web page landing template for StartUp company
 
-## EPAM Systems project
+Pet project
 
 ### About:
 
@@ -23,6 +23,5 @@
 ### Notes
 - Original CSS styling implemented in **general_css** branch
 - SASS in scss is writen in **saas_project** branch and merged into **develop** branch
-- The project is reviewed by EPAM Systems Frontend Software Engineers
 
 ## Deploy: https://rleydev.github.io/startup-template-web/

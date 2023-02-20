@@ -7,9 +7,16 @@
 - Fully responsive landing from 410px
 - Mobile version adaptive design with breakpoint at (768px)
 - HTML, CSS
-- SASS preprocessors - SCSS 
+- SASS preprocessor - SCSS 
 - Gitflow
 - Landing is developed according to Figma design
+- Section Join Us implemented through Vanilla JS
+- Webpack
+
+### Webpack commands:
+- npm run dev: development mode
+- npm run build: production build
+- npm run start: webpack -w
 
 #### The history of the whole development performed on Gitlab by division for several steps:
 1) https://gitlab.com/rleydev/html-essentials-hometask
@@ -22,7 +29,7 @@
 
 ### Notes
 - Original CSS styling implemented in **general_css** branch
-- SASS in scss is writen in **saas_project** branch and merged into **develop** branch
+- SASS in scss, Vanilla Js section and Webpack is developed in **saas_project** branch and merged into **develop** branch
 - The project is reviewed by EPAM Systems Frontend Software Engineers
 
 ### Deploy: https://rleydev.github.io/startup-template-web/

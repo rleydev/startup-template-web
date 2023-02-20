@@ -1,3 +1,5 @@
+import './scss_styles/style.css';
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const prevSection = document.getElementById('learn-more-section')

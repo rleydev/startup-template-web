@@ -418,7 +418,7 @@ header {
 .join-program-section {
   height: 436px;
   width: 100%;
-  background: url("../../assets/join-back.jpg");
+  background: url("../assets/join-back.png");
   background-size: cover;
   background-position: left;
   display: flex;

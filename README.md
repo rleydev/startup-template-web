@@ -1,5 +1,8 @@
 # Frontend web page landing template for StartUp company - Pet project
 
+## Run instructions:
+- npm intsall
+- see Webpack commands bellow
 ### About:
 
 - Fully responsive landing from 410px

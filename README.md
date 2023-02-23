@@ -33,6 +33,7 @@
 5) https://gitlab.com/rleydev/css-transforms-and-transitions
 6) https://gitlab.com/rleydev/css-animations
 7) https://gitlab.com/rleydev/css-preprocessors
+8) https://gitlab.com/rleydev/mastering-javascript-events
 
 ### Notes
 - Production build and hosted in gh-pages in branch **gh-pages**

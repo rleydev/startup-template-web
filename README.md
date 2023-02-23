@@ -8,11 +8,17 @@
 - Fully responsive landing from 410px
 - Mobile version adaptive design with breakpoint at (768px)
 - HTML, CSS
+- JavaScript
 - SASS preprocessor - SCSS 
 - Gitflow
 - Landing is developed according to Figma design
 - Section Join Us implemented through Vanilla JS
 - Webpack
+- Factory pattern in Join Our Program Section
+- email validation for (@gmail.com, @hotmail.com)
+- Local Storage
+- Subscribed State UI change after reloading the page according to submitted email
+- Save feature of input value after reloading the page through Local Storage
 
 ### Webpack commands:
 - npm run dev: development mode

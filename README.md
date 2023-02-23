@@ -35,6 +35,7 @@
 7) https://gitlab.com/rleydev/css-preprocessors
 
 ### Notes
+- Production build and hosted in gh-pages in branch **gh-pages**
 - Original CSS styling implemented in **general_css** branch
 - SASS in scss, Vanilla Js section and Webpack is developed in **saas_project** branch and merged into **develop** branch
 - Factory pattern, local storage Join Program section UI update based on email validation and subscribtion is devdeloped in **addit-dev** branch

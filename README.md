@@ -37,5 +37,6 @@
 ### Notes
 - Original CSS styling implemented in **general_css** branch
 - SASS in scss, Vanilla Js section and Webpack is developed in **saas_project** branch and merged into **develop** branch
+- Factory pattern, local storage Join Program section UI update based on email validation and subscribtion is devdeloped in **addit-dev** branch
 
 ### Deploy: https://rleydev.github.io/startup-template-web/

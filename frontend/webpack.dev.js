@@ -14,6 +14,9 @@ module.exports = merge(common, {
             overlay: {
                 warnings: false
             }
-        }
+        },
+        proxy: {
+            '/api': 'http://localhost:3000',
+        },
     },
 })

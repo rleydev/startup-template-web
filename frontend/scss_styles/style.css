@@ -577,6 +577,7 @@ header {
   .join-program-section__layer__email-form {
     flex-direction: column;
     align-items: center;
+    width: auto;
   }
 }
 .join-program-section__layer__email-form__email-input {
@@ -589,7 +590,7 @@ header {
 }
 @media only screen and (max-width: 768px) {
   .join-program-section__layer__email-form__email-input {
-    min-width: 419px;
+    min-width: 300px;
   }
 }
 .join-program-section__layer__email-form__email-input::placeholder {

@@ -42,6 +42,7 @@
             @include mixins.media-query(var.$media-query_768) {
                 flex-direction: column;
                 align-items: center;
+                width: auto;
             }
 
             &__email-input {
@@ -53,7 +54,7 @@
                 border: 0;
 
                 @include mixins.media-query(var.$media-query_768) {
-                    min-width: 419px;
+                    min-width: 300px;
                 }
 
                 &::placeholder {

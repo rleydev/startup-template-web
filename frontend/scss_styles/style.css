@@ -330,13 +330,129 @@ header {
   }
 }
 
+.big-com-section {
+  display: flex;
+  width: 100%;
+  height: 850px;
+  flex-direction: column;
+  gap: 57px;
+  justify-content: center;
+  align-items: center;
+}
+.big-com-section__text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 41px;
+  align-items: center;
+}
+.big-com-section__text-container__title {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  width: 400px;
+  text-align: center;
+}
+.big-com-section__text-container__subtitle {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  width: 550px;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .big-com-section__text-container__subtitle {
+    width: auto;
+  }
+}
+.big-com-section__card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .big-com-section__card-container {
+    flex-direction: column;
+  }
+}
+.big-com-section__card-container__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 400px;
+  width: 315px;
+  padding-top: 31px;
+  padding-bottom: 29px;
+}
+@media only screen and (max-width: 1000px) {
+  .big-com-section__card-container__card:last-of-type {
+    display: none;
+  }
+  .big-com-section__card-container__card:nth-of-type(2) {
+    box-shadow: 0 0 5px #464547;
+    border-radius: 8px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .big-com-section__card-container__card:first-of-type {
+    display: none;
+  }
+  .big-com-section__card-container__card:nth-of-type(1) {
+    box-shadow: 0 0 5px #464547;
+    border-radius: 8px;
+  }
+}
+.big-com-section__card-container__card:last-of-type {
+  box-shadow: 0 0 5px #464547;
+  border-radius: 8px;
+}
+.big-com-section__card-container__card__img {
+  width: 150px;
+  height: 150px;
+}
+.big-com-section__card-container__card__des {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  width: 264px;
+  height: 75px;
+  text-align: center;
+}
+.big-com-section__card-container__card__name {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 17.5px;
+  text-align: center;
+}
+.big-com-section__card-container__card__pos {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  width: 116px;
+  text-align: center;
+  height: 30px;
+}
+
 /* Animation for the hole play button hover */
 /* Settings for play icon change color */
 .learn-more-section {
   display: flex;
   flex-direction: column;
   height: 637px;
-  background-image: url(../assets/third_background.jpg);
+  background: url(../assets/third_background.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -418,7 +534,7 @@ header {
 .join-program-section {
   height: 436px;
   width: 100%;
-  background: url(../assets/join-back.png);
+  background: url("../assets/join-back.png");
   background-size: cover;
   background-position: left;
   display: flex;

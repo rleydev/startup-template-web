@@ -53,6 +53,26 @@ class JoinUsSection {
             emailButton.addEventListener('click', e => {
                 e.preventDefault()
                 localStorage.removeItem('email')
+
+                emailButton.disabled = true
+
+                if (emailButton.disabled) {
+                    emailButton.style.cursor = 'default'
+                    emailButton.style.opacity = 0.5
+                } 
+
+                fetch('http://localhost:3000/unsubscribe', {
+                    method: 'POST'
+                })
+                .then(response => {
+                    alert('Email was unsubscribed! Please reload the page!')
+                    console.log(response)
+                })
+                .catch(error => {
+                    alert(error.message);
+                    emailButton.style.cursor = 'pointer'
+                    emailButton.style.opacity = 1
+                });
             })
 
             emailButton.innerHTML = "UNSUBSCRIBE"
@@ -71,6 +91,56 @@ class JoinUsSection {
         
                 isValid ? localStorage.setItem('email', emailValue) : alert('Invalid email format!')
                 emailInput.value = emailValue
+
+
+                if (isValid) {
+
+                    emailButton.disabled = true;
+
+                    if (emailButton.disabled) {
+                        emailButton.style.cursor = 'default'
+                        emailButton.style.opacity = '0.5'
+                    } 
+
+                    fetch('http://localhost:3000/subscribe', {
+                        method: 'POST',
+            
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({email: emailValue})
+                    })
+                    .then(response => {
+
+                        switch (response.status) {
+                            case 200:
+                                alert('Email is successfully subscribed! Please reload the page!');
+                                break
+                            case 400:
+                                alert('Wrong payload');
+                                emailButton.disabled = false;
+                                emailButton.style.opacity = '1'
+                                emailButton.style.cursor = 'pointer'
+                                break
+                            case 422:
+                                alert('Email is already in use');
+                                emailButton.disabled = false;
+                                emailButton.style.opacity = '1'
+                                emailButton.style.cursor = 'pointer'
+                                localStorage.removeItem('email')
+                                break
+                            default:
+                                break;
+                        }
+                    })
+                    .catch(error => {
+                        alert(error.message);
+
+                        emailButton.disabled = false;
+                        emailButton.style.opacity = '1'
+                        emailButton.style.cursor = 'pointer'
+                    });
+                }
             })
 
             emailInput.addEventListener('input', e => {

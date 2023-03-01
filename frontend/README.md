@@ -1,8 +1,21 @@
 # Frontend web page landing template for StartUp company - Pet project
 
 ## Run instructions:
-- npm intsall
-- see Webpack commands bellow
+- Open Frontend folder and Backend folder separately
+- **See commands for frontend and backend npm bellow**
+
+### Webpack Frontend commands:
+- npm run dev: development mode
+- npm run build: production build
+- npm run start: webpack -w
+= (localhost:9000)
+
+### Backend commands:
+- npm install
+- npm run dev: development mode
+- npm run start: launch server
+= (localhost:3000)
+
 ### About:
 
 - Fully responsive landing from 410px
@@ -13,17 +26,18 @@
 - Gitflow
 - Landing is developed according to Figma design
 - Section Join Us implemented through Vanilla JS
-- Webpack
+- Webpack 5
 - Factory pattern in Join Our Program Section
-- email validation for (@gmail.com, @hotmail.com)
+- Email validation for (@gmail.com, @hotmail.com)
 - Local Storage
 - Subscribed State UI change after reloading the page according to submitted email
 - Save feature of input value after reloading the page through Local Storage
-
-### Webpack commands:
-- npm run dev: development mode
-- npm run build: production build
-- npm run start: webpack -w
+- Backend Node.js and Express.js
+- Fecth requests to backend
+- Community section receives data from backend
+- After pushing "Subscribe" button valid email is sent and written in backend JSON
+- After pushing "USubscribe" button valid email is deleted in backend JSON
+- 'forbitten@gmail.com' is set as an email already exists in backend data
 
 #### The history of the whole development performed on Gitlab by division for several steps:
 1) https://gitlab.com/rleydev/html-essentials-hometask

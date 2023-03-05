@@ -47,6 +47,8 @@ class JoinUsSection {
 
         let emailValue = ''
 
+        const webworker = new Worker(new URL('./join-us-worker.js', import.meta.url));
+
         if (this.isSubscribed) {
             emailInput.style.display = 'none'
 
@@ -55,6 +57,11 @@ class JoinUsSection {
                 localStorage.removeItem('email')
 
                 emailButton.disabled = true
+
+                webworker.postMessage({
+                    type: 'userEvent',
+                    event: 'unsubscribe button pressed'
+                })
 
                 if (emailButton.disabled) {
                     emailButton.style.cursor = 'default'
@@ -88,6 +95,11 @@ class JoinUsSection {
         
                 emailValue = emailInput.value;
                 const isValid = validate(emailValue);
+
+                webworker.postMessage({
+                    type: 'userEvent',
+                    event: 'subscribe button pressed'
+                })
         
                 isValid ? localStorage.setItem('email', emailValue) : alert('Invalid email format!')
                 emailInput.value = emailValue
@@ -147,8 +159,31 @@ class JoinUsSection {
                 e.preventDefault()
                 const currentValue = e.target.value;
                 localStorage.setItem('input-email', currentValue)
+
+                webworker.postMessage({
+                    type: 'userEvent',
+                    event: 'input data inserted'
+                })
             })
        
+        }
+
+        webworker.onmessage = e => {
+            let userEvents = e.data
+            console.log(userEvents)
+
+            fetch('http://localhost:3000/analytics/user', {
+                        method: 'POST',
+            
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({userEvents})
+            }).then(response => {
+                console.log('User events were sent ' + response.status)
+            }).catch(error => {
+                console.log('user events were not sent with error - ' + error.status)
+            })
         }
 
 

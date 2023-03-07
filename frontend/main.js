@@ -1,9 +1,12 @@
 import { JoinUsSectionFactory } from './join-us-section.js'
 import './scss_styles/style.css'
 import  { BigCommunityFactory } from './community-section'
+import { Performance } from './performance.js'
+
 
 const factorySection = new JoinUsSectionFactory();
 const communitySection = new BigCommunityFactory();
+const performance = new Performance();
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -20,4 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
         main.insertBefore(joinUsSection, main.children[5]);
     }
+
+    performance.measureFetchAndSend()
 })

@@ -58,6 +58,7 @@
 - 'forbidden@gmail.com' is set as an email already exists in backend data
 - Unit Tests for email validation of 3 types of function including Async performed with **Mocha**, **Chai**, **Sinon** libraries
 - User Events sending to backend analytics server implemented with **WebWorker**
+- Performance Measurements of fetching Community Section and Layout page are sent to backend performance analytics JSON
 
 #### The history of the whole development performed on Gitlab by division for several steps:
 1) https://gitlab.com/rleydev/html-essentials-hometask
